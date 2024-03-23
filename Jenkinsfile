@@ -33,5 +33,12 @@ pipeline {
                 bat 'npm test'
             }
         }
+                stage('Cleanup') {
+            steps {
+                // Изтриване на свалените файлове
+                bat 'rmdir /s /q Student-Registry-App-Jenkins' // За Windows
+                // sh 'rm -rf Student-Registry-App-Jenkins' // За Unix/Linux
+            }
+        }
     }
 }
