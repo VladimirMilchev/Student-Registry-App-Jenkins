@@ -28,6 +28,12 @@ pipeline {
                 bat 'npm start'
             }
         }
+        stage('Stop Application') {
+            steps {
+                // Спиране на приложението (пример за Windows)
+                bat 'taskkill /F /IM node.exe' // Променете node.exe с името на процеса на вашия приложението
+            }
+        }
         stage('Run Tests') {
             steps {
                 // Run tests using npm
