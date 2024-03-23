@@ -26,7 +26,7 @@ pipeline {
                 // Start your Node.js application (if needed)
                 // Example assuming your entry point is app.js
                 bat 'start /B npm start' // /B - стартиране на процеса във фонов режим
-                bat 'timeout /t 10 /nobreak' // Спиране на процеса след 10 секунди
+                bat 'timeout /t 100 /nobreak' // Спиране на процеса след 10 секунди
                 bat 'taskkill /F /IM node.exe'
             }
         }
