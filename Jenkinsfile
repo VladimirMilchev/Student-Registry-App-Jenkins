@@ -21,13 +21,10 @@ pipeline {
                 bat 'npm install'
             }
         }
-        stage('Start Application') {
+        stage('Check for Security Vulnerabilities') {
             steps {
-                // Start your Node.js application (if needed)
-                // Example assuming your entry point is app.js
-                bat 'start /B npm start' // /B - стартиране на процеса във фонов режим
-                bat 'timeout /t 100 /nobreak' // Спиране на процеса след 10 секунди
-                bat 'taskkill /F /IM node.exe'
+                // Install Node.js dependencies using npm
+                bat 'npm audit'
             }
         }
         stage('Run Tests') {
