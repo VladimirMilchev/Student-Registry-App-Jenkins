@@ -18,7 +18,7 @@ pipeline {
             steps {
                 // Start your Node.js application (if needed)
                 // Example assuming your entry point is app.js
-                bat 'node app.js'
+                bat 'npm start'
             }
         }
         stage('Run Tests') {
