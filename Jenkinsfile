@@ -8,12 +8,6 @@ pipeline {
                 bat 'git clone https://github.com/VladimirMilchev/Student-Registry-App-Jenkins'
             }
         }
-        stage('Setup Node.js') {
-            steps {
-                // Setup Node.js using NVM'
-
-            }
-        }
         stage('Install Dependencies') {
             steps {
                 // Install Node.js dependencies using npm
