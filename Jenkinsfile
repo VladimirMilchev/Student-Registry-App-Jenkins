@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout the code from your Git repository
-                bat 'git clone https://github.com/yourusername/yourrepository.git'
+                bat 'git clone https://github.com/VladimirMilchev/Student-Registry-App-Jenkins'
             }
         }
         stage('Install Dependencies') {
