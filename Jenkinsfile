@@ -4,15 +4,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                script {
-                    if (!fileExists('Student-Registry-App-Jenkins')) {
-                        // Ако директорията не съществува, изпълнете клонирането
-                        git 'https://github.com/VladimirMilchev/Student-Registry-App-Jenkins'
-                    } else {
-                        // Ако директорията съществува, пропуснете стъпката
-                        echo 'Directory already exists, skipping git clone.'
-                    }
-                }
+                // Checkout the code from your Git repository
+                bat 'git clone https://github.com/yourusername/yourrepository.git'
             }
         }
         stage('Install Dependencies') {
