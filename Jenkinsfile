@@ -26,12 +26,8 @@ pipeline {
                 // Start your Node.js application (if needed)
                 // Example assuming your entry point is app.js
                 bat 'npm start'
-            }
-        }
-        stage('Stop Application') {
-            steps {
-                // Спиране на приложението (пример за Windows)
-                bat 'taskkill /F /IM node.exe' // Променете node.exe с името на процеса на вашия приложението
+                bat 'sleep 10' // Изчакайте 10 секунди, за да се стартира приложението
+                bat 'taskkill /F /IM node.exe'
             }
         }
         stage('Run Tests') {
