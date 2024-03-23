@@ -11,6 +11,7 @@ pipeline {
                     } else {
                         // Ако директорията съществува, пропуснете стъпката
                         echo 'Directory already exists, skipping git clone.'
+                    }
                 }
             }
         }
