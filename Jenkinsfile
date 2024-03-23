@@ -21,15 +21,15 @@ pipeline {
                 bat 'npm install'
             }
         }
-        stage('Start Application') {
-            steps {
-                // Start your Node.js application (if needed)
-                // Example assuming your entry point is app.js
-                bat 'npm start'
-                bat 'sleep 10' // Изчакайте 10 секунди, за да се стартира приложението
-                bat 'taskkill /F /IM node.exe'
-            }
-        }
+        // stage('Start Application') {
+        //     steps {
+        //         // Start your Node.js application (if needed)
+        //         // Example assuming your entry point is app.js
+        //         bat 'npm start'
+        //         bat 'sleep 10' // Изчакайте 10 секунди, за да се стартира приложението
+        //         bat 'taskkill /F /IM node.exe'
+        //     }
+        // }
         stage('Run Tests') {
             steps {
                 // Run tests using npm
